@@ -1,0 +1,154 @@
+$standardSpace: 17px;
+$fontStyle: $standardSpace sans-serif;
+$primaryColor:#338ad6;
+$secondaryColor:#333333;
+$tertiaryColor:#ffffff;
+
+$shadow: 0 0 15px rgba(51, 51, 51, 0.6);
+
+$maxWidth: 1200px;
+$lighGrey:#e7e7e7;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    font: 16px sans-serif;
+    color: $secondaryColor;
+}
+button{
+    font: $fontStyle;
+    padding: $standardSpace;
+    background: $primaryColor;
+    border: none;
+    color: $tertiaryColor;
+
+    
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover{
+        background: $tertiaryColor;
+        color: $primaryColor;
+        border: 1px solid rgba(128, 128, 128, 0.158);
+    }
+}
+
+input{
+    font: $fontStyle;
+    padding: $standardSpace;
+    background: $lighGrey;
+    border: none;
+    font-style: $standardSpace;
+}
+
+nav{
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .nav-container{
+        max-width: $maxWidth;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            height: 60px;
+        }
+        button{
+          max-width: 150px;
+        }
+    }
+}
+
+.input-section{
+    height: 40vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    form{
+        max-width:$maxWidth ;
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-size: 2*$standardSpace;
+            margin: $standardSpace;
+        }
+
+        .form-inputs{
+            margin-left: 5vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: $standardSpace;
+            width: 100%;
+        }
+
+    }
+}
+.products-section{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .products-containers{
+        max-width:$maxWidth ;
+        width: 100%;
+        height: 100%; 
+
+        display:grid;
+        grid-gap: $standardSpace;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .card{
+            padding: $standardSpace;
+            box-shadow: $shadow;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 300px;
+
+            h2{
+                font-size: $standardSpace;
+            }
+            h1{
+                font-size: 3*$standardSpace;
+            }
+            .cardinfo{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: $standardSpace;
+                margin-top: 2*$standardSpace;
+            }
+
+            .card-info-detail:last-child{
+                text-align: right;
+            }
+
+        }
+    }
+}
