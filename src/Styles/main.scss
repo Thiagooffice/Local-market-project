@@ -3,8 +3,8 @@ $fontStyle: $standardSpace sans-serif;
 $primaryColor:#338ad6;
 $secondaryColor:#333333;
 $tertiaryColor:#ffffff;
-
 $shadow: 0 0 15px rgba(51, 51, 51, 0.6);
+$backDrop: rgba(0, 0, 0, 0.2);
 
 $maxWidth: 1200px;
 $lighGrey:#e7e7e7;
@@ -26,6 +26,7 @@ button{
     background: $primaryColor;
     border: none;
     color: $tertiaryColor;
+    cursor: pointer;
 
     
     width: 100%;
@@ -148,6 +149,66 @@ nav{
             .card-info-detail:last-child{
                 text-align: right;
             }
+
+        }
+    }
+}
+
+.backdrop{
+    width: 100vw;
+    height: 100vh;
+    background: $backDrop;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .close-modal-btn{
+        position: fixed;
+        bottom: 0;
+    }
+
+    .modal{
+        background: $tertiaryColor ;
+        max-width: 600px;
+        width: 100%;
+        min-height: 50vh;
+        padding: 3*$standardSpace;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            margin-bottom: $standardSpace;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        input{
+            margin: $standardSpace 0;
+        }
+
+        button{
+            margin: $standardSpace 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: $secondaryColor;
+
+            a:hover{
+                color: $primaryColor;
+            }
+        }
 
         }
     }
