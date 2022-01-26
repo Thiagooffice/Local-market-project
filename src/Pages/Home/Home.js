@@ -1,15 +1,11 @@
 import React from 'react';
 import logo from '../../assets/logoMaker.png'
+import Navbar from '../../Components/Navbar/Navbar'
 
 export default function Home() {
  return (
    <>
-   <nav>
-     <div className="nav-container">
-       <img src={logo} alt="Imagem Logo"/>
-       <button>ENTRAR</button>
-     </div>
-   </nav>
+    <Navbar/>
    <section className="input-section">
 
      <form >
